@@ -3,6 +3,6 @@ python:
   - "2.6"
   - "3.2"
 install:
-  - pip install pep8
+  - sudo pip install pep8
 script:
   - pep8 package-lambda.py
