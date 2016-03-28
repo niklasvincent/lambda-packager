@@ -17,6 +17,7 @@ File = namedtuple("File", ["absolutePath", "relativePath"])
 
 class Git(object):
 
+
     @staticmethod
     def executeInDirectory(directory, cmd):
         """Execute command in directory and return output"""
@@ -26,6 +27,7 @@ class Git(object):
         (stdout, stderr) = proc.communicate()
         os.chdir(current_working_directory)
         return (stdout, stderr)
+
 
     @staticmethod
     def getChecksum(directory):
@@ -54,6 +56,7 @@ class Packager(object):
         return list(Packager.deduplicateFileList(
             Packager.getFileList(path, exclude)
         ))
+
 
     @staticmethod
     def getFileList(path, exclude = None):
